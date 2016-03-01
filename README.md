@@ -1,5 +1,8 @@
 # BAS Base Project - Pristine - Base Flavour
 
+A starting point for new projects which wish to utilise the various components, practices and services created as part 
+of the BAS Stack concept.
+
 ## Licence
 
 Copyright 2016 NERC BAS.
