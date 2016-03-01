@@ -1,0 +1,2 @@
+# Remove files from uses of this project template when using `git archive`
+.gitattributes export-ignore
