@@ -120,7 +120,7 @@ if ($scriptMode == 'list') {
     echo $inventory;
 } elseif ($scriptMode == 'host') {
     $inventory = [];
-    
+
     // Transform FQDN to hostname for look up in hosts array
     $host = explode('.', $host)[0];
 
