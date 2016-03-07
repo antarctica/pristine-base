@@ -2,7 +2,7 @@
 # Setup infrastructure and application for production environment
 
 - name: setup production nodes and apply web and application team conventions
-  hosts: project--£PROJECT:&env--prod
+  hosts: project--£PROJECT-LOWER-CASE:&env--prod
   remote_user: "{{ privileged_remote_user }}"
   become: yes
   roles:

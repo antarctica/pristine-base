@@ -25,7 +25,7 @@ resource "atlas_artifact" "antarctica-trusty-latest" {
 #
 # AWS source: https://aws.amazon.com/ec2/
 # Terraform source: https://www.terraform.io/docs/providers/aws/r/instance.html
-resource "aws_instance" "£PROJECT-prod-node1" {
+resource "aws_instance" "£PROJECT-LOWER-CASE-prod-node1" {
     instance_type = "t2.nano"
     ami = "${atlas_artifact.antarctica-trusty-latest.metadata_full.region-eu-west-1}"
     key_name = "${var.aws_ssh_key}"
@@ -38,57 +38,57 @@ resource "aws_instance" "£PROJECT-prod-node1" {
     ]
 
     tags {
-        Name = "£PROJECT-prod-node1"
-        X-Project = "£PROJECT"
+        Name = "£PROJECT-LOWER-CASE-prod-node1"
+        X-Project = "£PROJECT-TITLE-CASE"
         X-Purpose = "Node"
         X-Subnet = "External"
         X-Managed-By = "Terraform"
     }
 }
 
-# This resource implicitly depends on the 'aws_instance.£PROJECT-prod-node1' resource
+# This resource implicitly depends on the 'aws_instance.£PROJECT-LOWER-CASE-prod-node1' resource
 #
 # AWS source: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#VPC_EIPConcepts
 # Terraform source: https://www.terraform.io/docs/providers/aws/r/eip.html
 #
 # Tags are not supported by this resource
-resource "aws_eip" "£PROJECT-prod-node1" {
-    instance = "${aws_instance.£PROJECT-prod-node1.id}"
+resource "aws_eip" "£PROJECT-LOWER-CASE-prod-node1" {
+    instance = "${aws_instance.£PROJECT-LOWER-CASE-prod-node1.id}"
     vpc = true
 }
 
-# This resource implicitly depends on the 'aws_eip.£PROJECT-prod-node1' resource
+# This resource implicitly depends on the 'aws_eip.£PROJECT-LOWER-CASE-prod-node1' resource
 # This resource implicitly depends on outputs from the the 'terraform_remote_state.BAS-AWS' resource
 #
 # AWS source: http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html
 # Terraform source: https://www.terraform.io/docs/providers/aws/r/route53_record.html
 #
 # Tags are not supported by this resource
-resource "aws_route53_record" "£PROJECT-prod-node1-ext" {
+resource "aws_route53_record" "£PROJECT-LOWER-CASE-prod-node1-ext" {
     zone_id = "${terraform_remote_state.BAS-AWS.output.BAS-AWS-External-Subdomain-ID}"
 
-    name = "£PROJECT-prod-node1"
+    name = "£PROJECT-LOWER-CASE-prod-node1"
     type = "A"
     ttl = "300"
     records = [
-        "${aws_eip.£PROJECT-prod-node1.public_ip}"
+        "${aws_eip.£PROJECT-LOWER-CASE-prod-node1.public_ip}"
     ]
 }
 
-# This resource implicitly depends on the 'aws_eip.£PROJECT-prod-node1' resource
+# This resource implicitly depends on the 'aws_eip.£PROJECT-LOWER-CASE-prod-node1' resource
 # This resource implicitly depends on outputs from the the 'terraform_remote_state.BAS-AWS' resource
 #
 # AWS source: http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html
 # Terraform source: https://www.terraform.io/docs/providers/aws/r/route53_record.html
 #
 # Tags are not supported by this resource
-resource "aws_route53_record" "£PROJECT-prod-node1-int" {
+resource "aws_route53_record" "£PROJECT-LOWER-CASE-prod-node1-int" {
     zone_id = "${terraform_remote_state.BAS-AWS.output.BAS-AWS-Internal-Subdomain-ID}"
 
-    name = "£PROJECT-prod-node1"
+    name = "£PROJECT-LOWER-CASE-prod-node1"
     type = "A"
     ttl = "300"
     records = [
-        "${aws_eip.£PROJECT-prod-node1.private_ip}"
+        "${aws_eip.£PROJECT-LOWER-CASE-prod-node1.private_ip}"
     ]
 }

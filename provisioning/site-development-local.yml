@@ -2,7 +2,7 @@
 # Setup infrastructure and application for development environment
 
 - name: setup development nodes and apply web and application team conventions
-  hosts: project--£PROJECT:&env--dev-local
+  hosts: project--£PROJECT-LOWER-CASE:&env--dev-local
   remote_user: "{{ privileged_remote_user }}"
   become: yes
   roles:
