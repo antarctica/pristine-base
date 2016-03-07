@@ -665,6 +665,16 @@ function make_wsr_1_element_groups(array $hosts, array $groups)
             }
         }
 
+        // If a host is managed using 'vagrant' and is in a 'testing' environment,
+        // this is changed to 'testing-local', for the purposes of the BAS Systems Inventory
+        if (array_key_exists('manager--vagrant', $groups)) {
+            if (in_array($hostDetails['fqdn'], $groups['manager--vagrant'])) {
+                if ($hostnameWSRDecoded['environment'] == 'test') {
+                    $hostnameWSRDecoded['environment'] = 'test-local';
+                }
+            }
+        }
+
         // Make group for WSR-1 'environment'
         if (! array_key_exists('env--' . $hostnameWSRDecoded['environment'], $groups)) {
             $groups['env--' . $hostnameWSRDecoded['environment']] = [];
