@@ -120,7 +120,7 @@ if ($scriptMode == 'list') {
     echo $inventory;
 } elseif ($scriptMode == 'host') {
     $inventory = [];
-    
+
     // Transform FQDN to hostname for look up in hosts array
     $host = explode('.', $host)[0];
 
@@ -661,6 +661,16 @@ function make_wsr_1_element_groups(array $hosts, array $groups)
             if (in_array($hostDetails['fqdn'], $groups['manager--vagrant'])) {
                 if ($hostnameWSRDecoded['environment'] == 'dev') {
                     $hostnameWSRDecoded['environment'] = 'dev-local';
+                }
+            }
+        }
+
+        // If a host is managed using 'vagrant' and is in a 'testing' environment,
+        // this is changed to 'testing-local', for the purposes of the BAS Systems Inventory
+        if (array_key_exists('manager--vagrant', $groups)) {
+            if (in_array($hostDetails['fqdn'], $groups['manager--vagrant'])) {
+                if ($hostnameWSRDecoded['environment'] == 'test') {
+                    $hostnameWSRDecoded['environment'] = 'test-local';
                 }
             }
         }

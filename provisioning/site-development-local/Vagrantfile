@@ -29,14 +29,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Shared folders
     # /vagrant is not used to ensure consistency across environments [development/staging/production]
   config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.synced_folder "../../", "/srv/apps/£PROJECT"
+  config.vm.synced_folder "../../", "/srv/apps/£PROJECT-LOWER-CASE"
 
   # Virtual machine definitions
     # Options using 'node' apply to a single VM only
     # For BAS projects, the hostname **MUST** be the FQDN and comply with WSR-1, e.g. project-environment-purpose.v.m
     # the identifier **MUST** be the same as the hostname, without a domain, e.g. project-environment-purpose
-  config.vm.define "£PROJECT-dev-node1" do |node|
-    node.vm.hostname = "£PROJECT-dev-node1.v.m"
+  config.vm.define "£PROJECT-LOWER-CASE-dev-node1" do |node|
+    node.vm.hostname = "£PROJECT-LOWER-CASE-dev-node1.v.m"
 
     # Provision all virtual machines using Ansible to get to a common 'foundation'
       # We also download all roles required fro this project using Ansible Galaxy
