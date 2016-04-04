@@ -5,6 +5,11 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+
+### Removed
+
+* Terraform state files to ensure new projects start with a blank state and won't track unrelated infrastructure
+
 ## 0.1.0 - 07/03/2016
 
 ### Added
