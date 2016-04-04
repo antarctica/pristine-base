@@ -166,43 +166,43 @@ confirm
 mv ./provisioning/group_vars/project--£PROJECT-LOWER-CASE.yml ./provisioning/group_vars/project--$VAR_project_name_lower.yml
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£PRISTINE-VERSION/$VAR_pristine_version/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£PRISTINE-VERSION/$VAR_pristine_version/g" {} +
 printf "${FGGreen}<>${FGreset} [01/10] Pristine version set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£PRISTINE-FLAVOUR/$VAR_pristine_flavour/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£PRISTINE-FLAVOUR/$VAR_pristine_flavour/g" {} +
 printf "${FGGreen}<>${FGreset} [02/10] Pristine flavour set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£PROJECT-ONE-LINE-DESCRIPTION/$VAR_project_oneline/" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£PROJECT-ONE-LINE-DESCRIPTION/$VAR_project_oneline/" {} +
 printf "${FGGreen}<>${FGreset} [03/10] Project one-line description set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£PROJECT-LOWER-CASE/$VAR_project_name_lower/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£PROJECT-LOWER-CASE/$VAR_project_name_lower/g" {} +
 printf "${FGGreen}<>${FGreset} [04/10] Project name (snake-case) set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£PROJECT-TITLE-CASE/$VAR_project_name_title/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£PROJECT-TITLE-CASE/$VAR_project_name_title/g" {} +
 printf "${FGGreen}<>${FGreset} [05/10] Project name (title case) set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£MAINTAINER-EMAIL/$VAR_project_maintainer_name/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£MAINTAINER-EMAIL/$VAR_project_maintainer_name/g" {} +
 printf "${FGGreen}<>${FGreset} [06/10] Project maintainer (name) set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£MAINTAINER-DESCRIPTION/$VAR_project_maintainer_description/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£MAINTAINER-DESCRIPTION/$VAR_project_maintainer_description/g" {} +
 printf "${FGGreen}<>${FGreset} [07/10] Project maintainer (description) set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£PROJECT-REPOSITORY/$VAR_project_repo/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£PROJECT-REPOSITORY/$VAR_project_repo/g" {} +
 printf "${FGGreen}<>${FGreset} [08/10] Project repository set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£PROJECT-ISSUE-TRACKER/$VAR_project_issues/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£PROJECT-ISSUE-TRACKER/$VAR_project_issues/g" {} +
 printf "${FGGreen}<>${FGreset} [09/10] Project issue tracker set\n"
 
 printf "\n"
-find . -type f -exec sed -i '' -e "s/£BSI-System-ID/$VAR_project_bassys/g" {} +
+LC_ALL=C find . -type f -exec sed -i '' -e "s/£BSI-System-ID/$VAR_project_bassys/g" {} +
 printf "${FGGreen}<>${FGreset} [10/10] BAS Systems Inventory system association set\n"
 
 printf "\n"
