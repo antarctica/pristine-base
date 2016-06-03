@@ -3,3 +3,6 @@
 .gitignore export-ignore
 .editorconfig export-ignore
 .rsync-filter export-ignore
+
+# GitHub linguist specific customisations (to improve language statistics)
+provisioning/* linguist-vendored

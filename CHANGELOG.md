@@ -13,6 +13,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ## Fixed
 
 * Local development playbooks insufficiently specified that they are for 'local development', not 'development'
+* GitHub language statistics now ignore provisioning files
 ### Removed
 
 * Terraform state files to ensure new projects start with a blank state and won't track unrelated infrastructure
