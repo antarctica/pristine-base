@@ -1,7 +1,7 @@
 ---
-# Setup infrastructure and application for development environment
+# Setup infrastructure and application for local development environment
 
-- name: setup development nodes and configure to follow BAS conventions
+- name: setup local development nodes and configure to follow BAS conventions
   hosts: project--£PROJECT-LOWER-CASE:&env--dev-local
   remote_user: "{{ privileged_remote_user }}"
   become: yes

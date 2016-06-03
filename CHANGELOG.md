@@ -10,6 +10,9 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 * Setup script to automate setting up new instances of this project template
 * Template `README` and `CHANGELOG`, which were previously tracked as documentation appendices
 
+## Fixed
+
+* Local development playbooks insufficiently specified that they are for 'local development', not 'development'
 ### Removed
 
 * Terraform state files to ensure new projects start with a blank state and won't track unrelated infrastructure
