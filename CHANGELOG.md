@@ -23,6 +23,10 @@ this is needed
 
 * Terraform state files to ensure new projects start with a blank state and won't track unrelated infrastructure
 
+### Changed
+
+* Updating dynamic inventories to remove debug code and improve stability
+
 ## 0.1.0 - 07/03/2016
 
 ### Added
