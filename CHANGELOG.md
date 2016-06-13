@@ -5,6 +5,8 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+## 0.2.0 - 13/06/2016
+
 ### Changed - BREAKING!
 
 * `files/certificates` removed as this pre-deposes a project to using TLS certificates - see the Web BARC flavour if 

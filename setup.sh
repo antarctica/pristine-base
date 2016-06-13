@@ -146,16 +146,15 @@ printf "\n"
 
 printf "\n"
 
-read -r -p "? [01/10] > Which version of Pristine are you using? (e.g. '0.1.0') " VAR_pristine_version
-read -r -p "? [02/10] > Which flavour of Pristine are you using? (e.g. 'Base') " VAR_pristine_flavour
-read -r -p "? [03/10] > What's a one line description for this project? " VAR_project_oneline
-read -r -p "? [04/10] > What's the name of this project in snake case (like-this)? " VAR_project_name_lower
-read -r -p "? [05/10] > What's the name of this project in title case (Like This)? " VAR_project_name_title
-read -r -p "? [06/10] > What's the email address of the maintainer of this project? " VAR_project_maintainer_name
-read -r -p "? [07/10] > What's the description for the maintainer of this project (e.g. Name or Team)? " VAR_project_maintainer_description
-read -r -p "? [08/10] > What's the URL for the repository for this project? " VAR_project_repo
-read -r -p "? [09/10] > What's the URL for the issue tracker for this project? " VAR_project_issues
-read -r -p "? [10/10] > What's the ID of the system this project is associated with in the BAS Systems Inventory? " VAR_project_bassys
+read -r -p "? [01/09] > Which version of Pristine are you using? (e.g. '0.1.0') " VAR_pristine_version
+read -r -p "? [02/09] > Which flavour of Pristine are you using? (e.g. 'Base') " VAR_pristine_flavour
+read -r -p "? [03/09] > What's a one line description for this project? " VAR_project_oneline
+read -r -p "? [04/09] > What's the name of this project in snake case (like-this)? " VAR_project_name_lower
+read -r -p "? [05/09] > What's the name of this project in title case (Like This)? " VAR_project_name_title
+read -r -p "? [06/09] > What's the email address of the maintainer of this project? " VAR_project_maintainer_name
+read -r -p "? [07/09] > What's the description for the maintainer of this project (e.g. Name or Team)? " VAR_project_maintainer_description
+read -r -p "? [08/09] > What's the URL for the repository for this project? " VAR_project_repo
+read -r -p "? [09/09] > What's the URL for the issue tracker for this project? " VAR_project_issues
 
 # Escape special characters for compatibility with sed (e.g. 'http://www.bas.ac.uk' becomes: 'http:\/\/www.bas.ac.uk')
 VAR_pristine_version=$(sed -e 's/[\/&]/\\&/g' <<< "$VAR_pristine_version")
@@ -167,7 +166,6 @@ VAR_project_maintainer_name=$(sed -e 's/[\/&]/\\&/g' <<< "$VAR_project_maintaine
 VAR_project_maintainer_description=$(sed -e 's/[\/&]/\\&/g' <<< "$VAR_project_maintainer_description")
 VAR_project_repo=$(sed -e 's/[\/&]/\\&/g' <<< "$VAR_project_repo")
 VAR_project_issues=$(sed -e 's/[\/&]/\\&/g' <<< "$VAR_project_issues")
-VAR_project_bassys=$(sed -e 's/[\/&]/\\&/g' <<< "$VAR_project_bassys")
 
 printf "\n"
 
@@ -212,10 +210,6 @@ printf "${FGGreen}<>${FGreset} [08/10] Project repository set\n"
 printf "\n"
 LC_ALL=C find . -type f -exec sed -i '' -e "s/£PROJECT-ISSUE-TRACKER/$VAR_project_issues/g" {} +
 printf "${FGGreen}<>${FGreset} [09/10] Project issue tracker set\n"
-
-printf "\n"
-LC_ALL=C find . -type f -exec sed -i '' -e "s/£BSI-System-ID/$VAR_project_bassys/g" {} +
-printf "${FGGreen}<>${FGreset} [10/10] BAS Systems Inventory system association set\n"
 
 printf "\n"
 printf "${FGGreen}Find and replace's sorted${FGreset}\n"
