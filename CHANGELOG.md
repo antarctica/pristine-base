@@ -26,6 +26,7 @@ this is needed
 ### Changed
 
 * Updating dynamic inventories to remove debug code and improve stability
+* Updating production environment Terraform configuration to follow BAS-AWS project conventions
 
 ### Removed
 
