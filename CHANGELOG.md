@@ -27,6 +27,10 @@ this is needed
 
 * Updating dynamic inventories to remove debug code and improve stability
 
+### Removed
+
+* Removing references to the BAS Systems Inventory - this will be added back once it has been further developed
+
 ## 0.1.0 - 07/03/2016
 
 ### Added
