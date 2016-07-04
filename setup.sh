@@ -133,7 +133,7 @@ printf "${FGGreen}<>${FGreset} README sorted\n"
 
 printf "\n"
 rm ./CHANGELOG.md
-mv ./CHANGELOG.template.md ./CHANAGELOG.md
+mv ./CHANGELOG.template.md ./CHANGELOG.md
 printf "${FGGreen}<>${FGreset} README sorted\n"
 
 printf "\n"
