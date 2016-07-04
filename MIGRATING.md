@@ -9,3 +9,4 @@ All changes needed to migrate from one version of this project to the next will 
 *These steps should be completed in the order listed below*
 
 1. ensure `CHANGELOG.md` is spelt correctly, as the previous version contained a typo, `mv CHANAGELOG.md CHANGELOG.md`
+2. overwrite `provisioning/inventories/vagrant-dynamic-inventory` with the file in this version

@@ -12,6 +12,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Fixed
 
 * Fixing typo in name of templated change log file
+* Fixing broken Vagrant Ansible dynamic inventory where Vagrant machines are not running
 
 ## 0.2.0 - 13/06/2016
 

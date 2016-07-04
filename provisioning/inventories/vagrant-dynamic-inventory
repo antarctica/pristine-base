@@ -504,7 +504,7 @@ function get_host_identity_file(array $host, array $message)
  * The domain name used can be any valid domain name, however it is strongly recommended to use a domain name you
  * control, or that is reserved for internal/test purposes as per RFC 2606.
  *
- * If the hostname is not known for a host, the host is returned unmodified.
+ * If the hostname is not known for a host, the host is returned with a 'null' FQDN (i.e. the index will be created).
  *
  * @see get_host_details_from_messages() For building up information about hosts using these sort of functions
  * @see get_host_hostname() For specifically determining the hostname for a host from a relevant Vagrant message
@@ -519,6 +519,7 @@ function get_host_identity_file(array $host, array $message)
 function set_host_fqdn(array $host, $fqdnDomain)
 {
     if (! array_key_exists('hostname', $host) && empty($host['hostname'])) {
+        $host['fqdn'] = null;
         return $host;
     }
 
