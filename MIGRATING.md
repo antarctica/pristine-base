@@ -20,8 +20,15 @@ All changes needed to migrate from one version of this project to the next will 
     * update the `subnet` property of the EC2 instance to: 
     `"${terraform_remote_state.BAS-AWS.output.BAS-AWS-VPC-2-External-Subnet-ID}"`
     * update the `security_group_ids` property of the EC2 instance to [2]
+6. update `provisioning/galaxy.yml`
+    * `system-core` to at least `0.3.0`
+    * `system-users` to at least `2.0.0`
+    * `system-firewall` to at least `0.3.0`
+    * `system-ssh` to at least `0.3.0`
+    * Add `bas-ansible-roles-collection.system-users` at, at least version `0.2.0`
 
 [1]
+
 ```
 # This file relies on Terraform providers being previously configured - see '00-providers.tf'
 # This file relies on remote state resources being previously configured for shared outputs - see '01-remote-state.tf'

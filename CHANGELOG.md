@@ -8,6 +8,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Added
 
 * A migration guide now documents how to move between versions of this project
+* BARC user groups Ansible role
 
 ### Fixed
 
@@ -17,6 +18,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Changed
 
 * Updated production environment provisioning to use updated BAS AWS remote state and outputs
+* Updated Ansible roles to latest versions to address Ansible 2.0 compatibility
 
 ## 0.2.0 - 13/06/2016
 
