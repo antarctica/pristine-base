@@ -5,6 +5,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* A migration guide now documents how to move between versions of this project
+
 ### Fixed
 
 * Fixing typo in name of templated change log file
