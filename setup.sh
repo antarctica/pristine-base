@@ -91,7 +91,7 @@ fi
 printf "\n"
 printf "${FGGreen}All Systems Go!${FGreset}\n"
 
-# Clean up old and setup new git repository in project
+# Clean up old, and setup new, git repository in project
 printf "\n"
 printf "${FGBlue}== Git repository${FGreset}\n"
 
@@ -122,7 +122,7 @@ printf "${FGGreen}<>${FGreset} added temporary .gitignore entry for setup script
 printf "\n"
 printf "${FGGreen}Git repository sorted${FGreset}\n"
 
-# Clean up old and setup new README and CHANGELOG in project
+# Clean up old, and setup new, README and CHANGELOG in project, also remove MIGRATING guide
 printf "\n"
 printf "${FGBlue}== README and CHANGELOG setup${FGreset}\n"
 
@@ -133,11 +133,15 @@ printf "${FGGreen}<>${FGreset} README sorted\n"
 
 printf "\n"
 rm ./CHANGELOG.md
-mv ./CHANGELOG.template.md ./CHANAGELOG.md
+mv ./CHANGELOG.template.md ./CHANGELOG.md
 printf "${FGGreen}<>${FGreset} README sorted\n"
 
 printf "\n"
-printf "${FGGreen}README and CHANGELOG sorted${FGreset}\n"
+rm ./MIGRATING.md
+printf "${FGGreen}<>${FGreset} MIGRATING sortred\n"
+
+printf "\n"
+printf "${FGGreen}README, CHANGELOG and MIGRATING sorted${FGreset}\n"
 
 # Find and replace tasks
 printf "\n"
