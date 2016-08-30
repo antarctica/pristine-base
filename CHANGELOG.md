@@ -11,6 +11,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
+* Removing project specific handlers, which were accidentally included
 * Removing leading white-space in README
 
 ## 0.3.0 - 04/07/2016

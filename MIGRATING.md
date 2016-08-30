@@ -8,6 +8,7 @@ All changes needed to migrate from one version of this project to the next will 
 
 *These steps should be completed in the order listed below*
 
+1. Remove the `provisioning/handlers` directory
 2. Add these lines [1] to the `.gitignore` file
 3. Remove the leading space, if present, from `README.md`
 
