@@ -423,6 +423,9 @@ function get_host_provider(array $host, array $message)
     if ($message[4] == 'vmware_fusion') {
         $host['provider'] = 'vmware_desktop';
     }
+    if ($message[4] == 'virtualbox') {
+        $host['provider'] = 'virtualbox';
+    }
 
     return $host;
 }

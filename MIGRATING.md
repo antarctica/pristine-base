@@ -17,11 +17,20 @@ All changes needed to migrate from one version of this project to the next will 
 5. rename:
     * `provisioning/inventories/terraform-dynamic-inventory` to 
     `provisioning/inventories/terraform-prod-env-dynamic-inventory`
+6. update `provisioning/inventories/vagrant-dynamic-inventory` as follows:
+    * in the `get_host_provider()` function, add [2] after the `// Normalise 'provider' value` if statement
 
 [1]
 ```
 # Ansible playbook retry files
 *.retry
+```
+
+[2]
+```php
+if ($message[4] == 'virtualbox') {
+    $host['provider'] = 'virtualbox';
+}
 ```
 
 ## 0.2.0 --> 0.3.0
