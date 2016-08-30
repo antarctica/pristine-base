@@ -5,6 +5,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Missing git ignore entry for Ansible playbook retry files
+
 ## 0.3.0 - 04/07/2016
 
 ### Added

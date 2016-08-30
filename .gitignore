@@ -1,2 +1,5 @@
 # Provisioning tool directories
 provisioning/site-development-local/.vagrant
+
+# Ansible playbook retry files
+*.retry
