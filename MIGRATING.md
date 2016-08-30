@@ -11,6 +11,9 @@ All changes needed to migrate from one version of this project to the next will 
 1. Remove the `provisioning/handlers` directory
 2. Add these lines [1] to the `.gitignore` file
 3. Remove the leading space, if present, from `README.md`
+4. remove:
+    * `.rsync-filter`
+    * `provisioning/app-deploy-production.yml`
 
 [1]
 ```
