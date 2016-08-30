@@ -17,6 +17,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 supported
 * Support for VirtualBox added to Vagrant Ansible dynamic inventory
 
+### Changed
+
+* Updating production Terraform provisioning to incorporate changes to remote state and newer Terraform features
+
 ### Removed
 
 * Unused rsync based production deployment strategy

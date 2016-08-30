@@ -27,6 +27,6 @@ resource "null_resource" "ansible-terraform-foundation" {
   }
 
   provisioner "local-exec" {
-    command = "ansible-playbook -i ../inventories/terraform-dynamic-inventory 25-terraform-foundation.yml"
+    command = "ansible-playbook -i ../inventories/terraform-prod-env-dynamic-inventory 06-terraform-foundation.yml"
   }
 }
