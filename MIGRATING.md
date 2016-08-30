@@ -14,6 +14,9 @@ All changes needed to migrate from one version of this project to the next will 
 4. remove:
     * `.rsync-filter`
     * `provisioning/app-deploy-production.yml`
+5. rename:
+    * `provisioning/inventories/terraform-dynamic-inventory` to 
+    `provisioning/inventories/terraform-prod-env-dynamic-inventory`
 
 [1]
 ```

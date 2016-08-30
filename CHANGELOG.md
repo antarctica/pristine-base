@@ -13,6 +13,8 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 * Removing project specific handlers, which were accidentally included
 * Removing leading white-space in README
+* Renaming Terraform dynamic inventory to specify the environment, to allow other Terraform managed environments to be
+supported
 
 ### Removed
 
